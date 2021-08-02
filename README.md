@@ -1,6 +1,6 @@
 # Mean Ripley
 
-_Esta mini app web consiste en simular una transferencia de bancos con 3 principales funcionalidades: historial de transferencias, realizar transferencia y agregar nuevo destinatario _
+Esta mini app web consiste en simular una transferencia de bancos con 3 principales funcionalidades: historial de transferencias, realizar transferencia y agregar nuevo destinatario
 
 ## Comenzando 🚀
 
