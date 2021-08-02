@@ -1,0 +1,87 @@
+<div class="container mt-5">
+    <div class="row animate__animated animate__bounceInRight">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="titulo">Nuevo destinatario</h5>
+                    <form class="mt-2" [formGroup]="destinatarioForm" (ngSubmit)="nuevoDestinatario()">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control"  id="rut" formControlName="rut" validateRut formatRut >
+                            <label for="rut">RUT</label>
+                            <div class="text-danger"  
+                                *ngIf="destinatarioForm.get('rut')!.value.length == 0 && destinatarioForm.get('rut')?.touched">
+                                <span>El RUT <strong> es obligatorio. </strong></span>
+                            </div>
+                            <div class="text-danger"  
+                                *ngIf="destinatarioForm.get('rut')?.hasError('required') && destinatarioForm.get('rut')?.touched ">
+                                <span>El RUT <strong> es invalido. </strong></span>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" formControlName="nombre" id="nombre" >
+                            <label for="nombre">Nombre</label>
+                            <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('nombre')?.hasError('required') && destinatarioForm.get('nombre')?.touched">
+                                <span>El nombre <strong> es obligatorio. </strong></span>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" formControlName="correo" id="correo">
+                            <label for="correo">Correo</label>
+                            <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('correo')?.hasError('required') && destinatarioForm.get('correo')?.touched">
+                                <span>El correo <strong> es obligatorio. </strong></span>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" formControlName="telefono" id="telefono" >
+                            <label for="telefono">Teléfono</label>
+                            <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('telefono')?.hasError('required') && destinatarioForm.get('telefono')?.touched">
+                                <span>El teléfono <strong> es obligatorio. </strong></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="banco" id="banco">
+                                <option *ngFor="let banco of listaBancos " [value]="banco.name" >{{banco.name}}</option>
+                                
+                              </select>
+                              <label for="banco">Banco</label>
+                              <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('banco')?.hasError('required') && destinatarioForm.get('banco')?.touched">
+                                <span>El banco <strong> es obligatorio. </strong></span>
+                              </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="tipoCuenta" id="tipoCuenta" >
+                                <option selected>Cta. Corriente</option>
+                                <option selected>Cta. Vista</option>
+                                <option selected>Cta. de Ahorro</option>
+                                <option selected>Cta. Chequera Electrónica</option>
+                              </select>
+                              <label for="tipoCuenta">Tipo de cuenta</label>
+                              <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('tipoCuenta')?.hasError('required') && destinatarioForm.get('tipoCuenta')?.touched">
+                                <span>El tipo de cuenta <strong> es obligatorio. </strong></span>
+                              </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" formControlName="numeroCuenta" id="numeroCuenta" >
+                            <label for="numeroCuenta">Nº de cuenta</label>
+                            <div class="text-danger" 
+                                *ngIf="destinatarioForm.get('numeroCuenta')?.hasError('required') && destinatarioForm.get('numeroCuenta')?.touched">
+                                <span>El número de cuenta <strong> es obligatorio. </strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="/" class="btn btn-secondary btn-lg float-start" type="button">Volver</button>
+                            <button type="submit" [disabled]="destinatarioForm.invalid" class="btn btn-success btn-lg float-end">Aceptar</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

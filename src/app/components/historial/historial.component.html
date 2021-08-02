@@ -1,0 +1,46 @@
+
+<div class="container mt-5">
+    <div class="row animate__animated animate__bounceInLeft">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">Historial de transferencias</span>
+                    <button class="btn btn-primary float-end ms-2" 
+                            type="button" 
+                            routerLink="/nuevo-destinatario">
+                            <i class="fas fa-plus"></i> Destinatario
+                    </button>
+                    <button class="btn btn-success  float-end" 
+                            type="button" 
+                            routerLink="/transferir">
+                            <i class="fas fa-money-bill"></i> Transferir
+                    </button>
+
+                    <table class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre Destinatario</th>
+                            <th scope="col">Rut</th>
+                            <th scope="col">Banco</th>
+                            <th scope="col">Tipo de cuenta</th>
+                            <th scope="col">Monto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let hist of listaHistorial ">
+                            <td>{{hist.nombre}}</td>
+                            <td>{{hist.rut}}</td>
+                            <td>{{hist.banco}}</td>
+                            <td>{{hist.tipoCuenta}}</td>
+                            <td>{{hist.monto | currency}}</td>
+                          </tr>
+                        
+                         
+                        </tbody>
+                      </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
