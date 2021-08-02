@@ -6,7 +6,8 @@
                     <h5 class="titulo">Nuevo destinatario</h5>
                     <form class="mt-2" [formGroup]="destinatarioForm" (ngSubmit)="nuevoDestinatario()">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control"  id="rut" formControlName="rut" validateRut formatRut >
+                            <input type="text" class="form-control"  id="rut" formControlName="rut" formatRut  >
+                            
                             <label for="rut">RUT</label>
                             <div class="text-danger"  
                                 *ngIf="destinatarioForm.get('rut')!.value.length == 0 && destinatarioForm.get('rut')?.touched">

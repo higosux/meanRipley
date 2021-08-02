@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RutValidator } from 'ng9-rut';
+import { RutValidator } from 'ng10-rut';
 import { ToastrService } from 'ngx-toastr';
 import { Banco } from 'src/app/models/bancos';
 import { Destinatario } from 'src/app/models/destinatario';
@@ -25,7 +25,7 @@ export class NuevoDestinatarioComponent implements OnInit {
               private toastr: ToastrService,
               private _destinatarioService: DestinatarioService,
               private _bancosService: BancosService,
-              private rutValidator: RutValidator) {
+              private rutValidator: RutValidator,) {
 
     this.destinatarioForm = this.fb.group({
       rut: ['', [Validators.required, rutValidator]],

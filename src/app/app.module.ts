@@ -14,7 +14,8 @@ import { NuevoDestinatarioComponent } from './components/nuevo-destinatario/nuev
 import { HistorialComponent } from './components/historial/historial.component';
 import { TransferirComponent } from './components/transferir/transferir.component';
 import { FilterPipe } from './pipes/filtro.pipe';
-import { Ng9RutModule } from 'ng9-rut';
+import { Ng10RutModule } from 'ng10-rut';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +23,7 @@ import { Ng9RutModule } from 'ng9-rut';
     NuevoDestinatarioComponent,
     HistorialComponent,
     TransferirComponent,
-    FilterPipe,
-    
-
-     
+    FilterPipe     
   ],
   imports: [
     BrowserModule,
@@ -35,8 +33,7 @@ import { Ng9RutModule } from 'ng9-rut';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     HttpClientModule,
-    Ng9RutModule
-    
+    Ng10RutModule    
     
   ],
   providers: [],
