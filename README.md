@@ -1,27 +1,32 @@
-# Cliente
+# Mean Ripley
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Esta mini app web consiste en simular una transferencia de bancos con 3 principales funcionalidades: historial de transferencias, realizar transferencia y agregar nuevo destinatario
 
-## Development server
+## Comenzando 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Mira **Despliegue** para conocer como desplegar el proyecto.
 
-## Code scaffolding
+## Despliegue 📦
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_Ejecute `npm install ` para descargar todos los módulos necesarios para que el programa funcione_
+_Ejecute `ng serve` para levantar el servidor de desarrollo. Vaya a la url `http: // localhost: 4200 /`. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen._
 
-## Build
+## Construido con 🛠️
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+_Herramientas para la creación del proyecto utilizadas_
 
-## Running unit tests
+* [Angular](https://angular.io/) - Frontal framework web
+* [NodeJs](https://nodejs.org/es/) - Backend
+* [ExpressJS](https://expressjs.com/es/) - Backend framework web
+* [MongoDB](https://www.mongodb.com/cloud/atlas/) - Base de datos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Autor ✒️
 
-## Running end-to-end tests
+* **Gonzalo Santana** - *Developer* - [higosux](https://github.com/higosux)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Expresiones de Gratitud 🎁
 
-## Further help
+* Gracias por la oportunidad de ser participe en esta maravillosa prueba 📢
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
