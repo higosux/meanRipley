@@ -6,6 +6,7 @@ import { Destinatario } from 'src/app/models/destinatario';
 import { Transferir } from 'src/app/models/transferir';
 import { DestinatarioService } from 'src/app/services/destinatario.service';
 import { TransferirService } from 'src/app/services/transferir.service';
+import { createJSDocCallbackTag } from 'typescript';
 
 @Component({
   selector: 'app-transferir',
@@ -96,6 +97,10 @@ export class TransferirComponent implements OnInit {
     })
 
     
+  }
+
+  eliminarDestinatario(id: string){
+      console.log(id);
   }
 
 }

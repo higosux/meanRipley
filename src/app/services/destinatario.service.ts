@@ -22,4 +22,10 @@ export class DestinatarioService {
     return this.http.post(this.url, destinatario);
 
   }
+
+  eliminarDestinatario(destinatario: Destinatario){
+
+    return this.http.post(this.url, destinatario._id);
+
+  }
 }

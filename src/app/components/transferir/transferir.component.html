@@ -18,7 +18,7 @@
                             <div class=" col-sm-6 my-2 animate__animated animate__fadeIn" *ngFor="let destinatario of listaDestinatarios | appFilter:searchValue">
                               <div class="card border-0 shadow rounded bg-body">
                                 <div class="card-body ">
-                                  <h5 class="card-title"> <i class="fas fa-user-circle"></i> {{destinatario.nombre}}</h5>
+                                  <h5 class="card-title"> <i class="fas fa-user-circle"></i> {{destinatario.nombre}} <i class="fas fa-minus-circle float-end selectable" (click)="eliminarDestinatario(destinatario._id)"></i></h5>
                                   <p class="card-text">RUT: {{destinatario.rut}}. </p>
                                   <p class="card-text">Banco: {{destinatario.banco}} -
                                     {{destinatario.tipoCuenta}}. </p>
@@ -36,7 +36,7 @@
                           <div class=" col-sm-6 my-2 animate__animated animate__fadeIn" >
                             <div class="card border-0 shadow rounded bg-body">
                               <div class="card-body">
-                                <h5 class="card-title"> <i class="fas fa-user-circle"></i> {{nombre}}</h5>
+                                <h5 class="card-title"> <i class="fas fa-user-circle"></i> {{nombre}} <i class="fas fa-minus-circle float-end selectable" (click)="eliminarDestinatario(_id)"></i> </h5>
                                 <p class="card-text">RUT: {{rut}}. </p>
                                 <p class="card-text">Banco: {{banco}} -
                                   {{tipoCuenta}}. </p>
