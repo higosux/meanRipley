@@ -23,9 +23,9 @@ export class DestinatarioService {
 
   }
 
-  eliminarDestinatario(destinatario: Destinatario){
+  eliminarDestinatario(id: string){
 
-    return this.http.post(this.url, destinatario._id);
+    return this.http.delete(this.url +'/'+ id);
 
   }
 }

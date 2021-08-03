@@ -15,8 +15,8 @@
                             routerLink="/transferir">
                             <i class="fas fa-money-bill"></i> Transferir
                     </button>
-
-                    <table class="table table-hover table-striped mt-3">
+                    <p><i class="fas fa-circle-notch fa-spin fa-10x mt-5" *ngIf="cargando"></i></p>
+                    <table class="table table-hover table-striped mt-3" *ngIf="!cargando">
                         <thead>
                           <tr>
                             <th scope="col">Nombre Destinatario</th>

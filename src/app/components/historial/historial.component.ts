@@ -10,6 +10,7 @@ import { HistorialService } from 'src/app/services/historial.service';
 export class HistorialComponent implements OnInit {
 
   listaHistorial!: Historial[];
+  cargando!: boolean;
 
   constructor(private _historialService: HistorialService) { }
 
@@ -21,7 +22,13 @@ export class HistorialComponent implements OnInit {
 
     this._historialService.getHistorial().subscribe(data => {
         
-        this.listaHistorial = data;
+        if(data) {
+          this.listaHistorial = data;
+          this.cargando = false;
+        }else{
+          this.cargando = true;
+        }
+
   
       }, error => {
         console.log(error);

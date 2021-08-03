@@ -100,7 +100,17 @@ export class TransferirComponent implements OnInit {
   }
 
   eliminarDestinatario(id: string){
-      console.log(id);
+    this._destinatarioService.eliminarDestinatario(id).subscribe(data => {    
+      
+      console.log(data);
+      this.toastr.success('Se ha eliminado el destinatario con éxito','Destinatario eliminado!')
+      this.obtenerDestinatarios();
+
+    }, error => {
+
+      this.toastr.error(error,'Error en el servicio')
+      this.transferenciaForm.reset();
+    })
   }
 
 }
