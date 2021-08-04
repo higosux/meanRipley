@@ -11,14 +11,27 @@
 }
 
 .transferir{
+
     background-color: #ffc107;
     border-color: #e4c25c;
     font-size: 1.2rem;
 
 }
 
+.transferir:hover{
+    background-color: #fdc621;
+    border-color: #e4c568;
+    font-size: 1.2rem;
+}
+
 .destinatario{
     background-color: #6f42c1;
     border-color: #7044b6;
+    font-size: 1.2rem;
+}
+
+.destinatario:hover{
+    background-color: #794fc7;
+    border-color: #794ebd;
     font-size: 1.2rem;
 }
