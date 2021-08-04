@@ -8,7 +8,8 @@
                     
                     <p><i class="fas fa-circle-notch fa-spin fa-8x mt-5" *ngIf="cargando"></i></p>
                     <p class="my-5" *ngIf="noData"><i class="fas fa-info-circle"></i> No se encontraron transferencias realizadas</p>
-                    <table class="table table-hover table-striped mt-3" *ngIf="!cargando && !noData">
+                    <div class="table-scrollable">
+                      <table class="m-auto table table-hover table-striped table-responsive mt-3" *ngIf="!cargando && !noData">
                         <thead>
                           <tr>
                             <th scope="col">Nombre Destinatario</th>
@@ -30,6 +31,9 @@
                          
                         </tbody>
                       </table>
+
+                    </div>
+                    
 
                 </div>
             </div>
