@@ -1,15 +1,21 @@
-# Mean Ripley
+# Mean Ripley - Servidor
 
 Esta mini app web consiste en simular una transferencia de bancos con 3 principales funcionalidades: historial de transferencias, realizar transferencia y agregar nuevo destinatario
 
 ## Comenzando 🚀
+
+* Inicio - Historial de transferencias: acá se desplegara el menú de todas las transferencias realizadas.
+
+* Transferencia: Puede buscar todos los destinatarios por su nombre, banco, cuenta, etc. Como tambien puede eliminar, una vez seleccionado un destinatario, puede ingresar el monto a transferir.
+
+* Destintario: Pruede registrar un nuevo destintario siempre y cuando los datos sean validos.
 
 Mira **Despliegue** para conocer como desplegar el proyecto.
 
 ## Despliegue 📦
 
 _Ejecute `npm install ` para descargar todos los módulos necesarios para que el programa funcione_
-_Ejecute `ng serve` para levantar el servidor de desarrollo. Vaya a la url `http: // localhost: 4200 /`. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen._
+_Ejecute `npm run server` para levantar el servidor de desarrollo._
 
 ## Construido con 🛠️
 
