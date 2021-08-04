@@ -5,18 +5,10 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">Historial de transferencias</span>
-                    <button class="btn btn-primary float-end ms-2" 
-                            type="button" 
-                            routerLink="/nuevo-destinatario">
-                            <i class="fas fa-plus"></i> Destinatario
-                    </button>
-                    <button class="btn btn-success  float-end" 
-                            type="button" 
-                            routerLink="/transferir">
-                            <i class="fas fa-money-bill"></i> Transferir
-                    </button>
-                    <p><i class="fas fa-circle-notch fa-spin fa-10x mt-5" *ngIf="cargando"></i></p>
-                    <table class="table table-hover table-striped mt-3" *ngIf="!cargando">
+                    
+                    <p><i class="fas fa-circle-notch fa-spin fa-8x mt-5" *ngIf="cargando"></i></p>
+                    <p class="my-5" *ngIf="noData"><i class="fas fa-info-circle"></i> No se encontraron transferencias realizadas</p>
+                    <table class="table table-hover table-striped mt-3" *ngIf="!cargando && !noData">
                         <thead>
                           <tr>
                             <th scope="col">Nombre Destinatario</th>
@@ -44,3 +36,5 @@
         </div>
     </div>
 </div>
+
+

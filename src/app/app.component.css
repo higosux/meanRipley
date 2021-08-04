@@ -1,0 +1,24 @@
+.banco{
+    
+    font-family: 'Lusitana', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c9bde2, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b0a6c5, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.transferir{
+    background-color: #ffc107;
+    border-color: #e4c25c;
+    font-size: 1.2rem;
+
+}
+
+.destinatario{
+    background-color: #6f42c1;
+    border-color: #7044b6;
+    font-size: 1.2rem;
+}

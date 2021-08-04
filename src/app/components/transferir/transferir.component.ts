@@ -74,7 +74,7 @@ export class TransferirComponent implements OnInit {
       this.listaDestinatarios = data;
 
     }, error => {
-      console.log(error);
+      this.toastr.error(error,'Error en el servicio')
     })
   }
 
@@ -102,7 +102,6 @@ export class TransferirComponent implements OnInit {
   eliminarDestinatario(id: string){
     this._destinatarioService.eliminarDestinatario(id).subscribe(data => {    
       
-      console.log(data);
       this.toastr.success('Se ha eliminado el destinatario con éxito','Destinatario eliminado!')
       this.obtenerDestinatarios();
 

@@ -45,11 +45,12 @@ export class NuevoDestinatarioComponent implements OnInit {
   obtenerBancos(): void {
 
     this._bancosService.getBancos().subscribe(data => {
-        console.log(data.banks);
+        
         this.listaBancos = data.banks;
   
       }, error => {
-        console.log(error);
+        this.toastr.error(error,'Error en el servicio')
+
       })
   }
 
@@ -70,7 +71,7 @@ export class NuevoDestinatarioComponent implements OnInit {
       this.router.navigate(['/']);
 
     }, err => {
-      console.log(err);
+      this.toastr.error(err,'Error en el servicio')
       this.destinatarioForm.reset();
 
     })

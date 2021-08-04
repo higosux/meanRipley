@@ -11,10 +11,12 @@ export class HistorialComponent implements OnInit {
 
   listaHistorial!: Historial[];
   cargando!: boolean;
+  noData!: boolean;
 
   constructor(private _historialService: HistorialService) { }
 
   ngOnInit(): void {
+    this.cargando = true;
     this.obtenerHistorial();
   }
 
@@ -23,8 +25,16 @@ export class HistorialComponent implements OnInit {
     this._historialService.getHistorial().subscribe(data => {
         
         if(data) {
-          this.listaHistorial = data;
-          this.cargando = false;
+          if(data.length > 0) {
+            setTimeout(() => {
+              this.noData = false;            
+              this.listaHistorial = data;
+              this.cargando = false;
+            }, 500)
+          }else{
+            this.noData = true;
+            this.cargando = false;
+          }
         }else{
           this.cargando = true;
         }
